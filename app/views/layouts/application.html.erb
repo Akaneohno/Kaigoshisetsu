@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>タイトル名</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <#%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kaigoshisetsu</h1>
+      <div class="header-list">
+      <ul>
+      <%= link_to '老人ホームを診断', :controller => "kaigos", :action => "index" %>
+      <%= link_to '認知症予防クイズ', :controller => "quizs", :action => "index" %>
+      </ul>
+      </div>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

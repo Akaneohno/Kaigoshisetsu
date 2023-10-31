@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if controller_name == 'kaigos' && action_name == 'index' %>
+    <%= stylesheet_link_tag 'kaigos' %>
+  <% end %>
+    <title>Document</title>
+</head>
+
+
+<header id="commonHeader">
+<section id="flowsHead" class="wf-mplus1p">たった1分であなたにあった老人ホームを診断できる！</section>
+<section id="flows" class="wf-mplus1p">老人ホーム診断</section>
+</header>
+
+
+
+<div id="wrapper">
+   <div class="sense">
+        <article id="pageBody">
+
+            <div class="point_box">
+            <div class="box">
+            <div class="txt">
+            <p>下記の質問に答えてみてください。最適な老人ホームを提案します</p>
+            </div>
+            </div>
+            </div>
+
+
+            <ul class="qalist wf-mplus1p">
+
+            <li id="1" class="question">
+                <a name="#1"></a>
+                <div class="qbox"><span  class="q">Q.</span>医療介護は必要ですか?</div>
+                <div class="qabox">
+                    <a href="#2" onclick="show(2)" class="qabtn"><div class="btnBox btnBox_y">介護のみ<br>でよい</div></a>
+                    <a href="#101" onclick="show(3)" class="qabtn"><div class="btnBox btnBox_n">必要</div></a>
+                </div>
+            </li>
+            <li id="2" class="question">
+                <a name="#"></a>
+                <div class="qbox"><span  class="q">Q.</span>終身での入所を希望しますか？</div>
+                <div class="qabox">
+                    <a href="#3" onclick="show(101)" class="qabtn"><div class="btnBox btnBox_y">希望する</div></a>
+                    <a href="#102" onclick="show(102)" class="qabtn"><div class="btnBox btnBox_n">リハビリをして<br>自宅へ戻りたい</div></a>
+                </div>
+            </li>
+            <li id="3" class="question">
+                <a name="#"></a>
+                <div class="qbox"><span  class="q">Q.</span>ケア体制の充実は重視しますか?？</div>
+                <div class="qabox">
+                    <a href="#4" onclick="show(103)" class="qabtn"><div class="btnBox btnBox_y">高い</div></a>
+                    <a href="#5" onclick="show(104)" class="qabtn"><div class="btnBox btnBox_n">低い</div></a>
+                </div>
+            </li>
+            <li id="4" class="question">
+                <a name="#4"></a>
+                <div class="qbox"><span  class="q">Q.</span>入居する方に認知症はありますか?</div>
+                <div class="qabox">
+                    <a href="#7" onclick="show(5)" class="qabtn"><div class="btnBox btnBox_y">ある</div></a>
+                    <a href="#6" onclick="show(6)" class="qabtn"><div class="btnBox btnBox_n">ない</div></a>
+                </div>
+            </li>
+            <li id="5" class="question">
+                <a name="#5"></a>
+                <div class="qbox"><span  class="q">Q.</span>予算はどれくらいですか?</div>
+                <div class="qabox">
+                    <a href="#6" onclick="show(5)" class="qabtn"><div class="btnBox btnBox_y">こだわりは<br>ない</div></a>
+                    <a href="#108" onclick="show(6)" class="qabtn"><div class="btnBox btnBox_n">余裕は<br>あまりない</div></a>
+                </div>
+            </li>
+            <li id="6" class="question">
+            <a name="#4"></a>
+            <div class="qbox"><span  class="q">Q.</span>施設で重視するのはどちらですか?</div>
+            <div class="qabox">
+                <a href="#105" onclick="show(5)" class="qabtn"><div class="btnBox btnBox_y">介護の<br>手厚さ</div></a>
+                <a href="#8" onclick="show(6)" class="qabtn"><div class="btnBox btnBox_n">プライバシー</div></a>
+            </div>
+            </li>
+            <li id="7" class="question">
+            <a name="#4"></a>
+            <div class="qbox"><span  class="q">Q.</span>入居の時期はいつですか?</div>
+            <div class="qabox">
+                <a href="#9" onclick="show(5)" class="qabtn"><div class="btnBox btnBox_y">こだわりは<br>ない</div></a>
+                <a href="#105" onclick="show(6)" class="qabtn"><div class="btnBox btnBox_n">なるべく<br>早く</div></a>
+            </div>
+            </li>
+            <li id="8" class="question">
+            <a name="#4"></a>
+            <div class="qbox"><span  class="q">Q.</span>施設内のアクティビティで重視するのはどちらですか?</div>
+            <div class="qabox">
+                <a href="#106" onclick="show(5)" class="qabtn"><div class="btnBox btnBox_y">積極的に<br>楽しみたい</div></a>
+                <a href="#107" onclick="show(6)" class="qabtn"><div class="btnBox btnBox_n">落ち着いて<br>生活したい</div></a>
+            </div>
+            </li>
+            <li id="9" class="question">
+            <a name="#4"></a>
+            <div class="qbox"><span  class="q">Q.</span>予算はどれくらいですか?</div>
+            <div class="qabox">
+                <a href="#103" onclick="show(5)" class="qabtn"><div class="btnBox btnBox_y">こだわりは<br>ない</div></a>
+                <a href="#104" onclick="show(6)" class="qabtn"><div class="btnBox btnBox_n">余裕は<br>あまりない</div></a>
+            </div>
+            </li>
+            </ul>
+
+
+
+
+
+            <div class="answerList">
+
+                <div id="101" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは
+                        <span class="fs-18"><span class="bg-y">『介護療養型医療施設,介護医療院』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明会文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="102" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは
+                        <span class="fs-18"><span class="bg-y">『介護老人保健施設』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="103" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは<span class="fs-18"><span class="bg-y">『グループホーム』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="104" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは<span class="fs-18"><span class="bg-y">『特別養護老人ホーム』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="105" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは<span class="fs-18"><span class="bg-y">『介護付き有料老人ホーム』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="106" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは<span class="fs-18"><span class="bg-y">『住宅型有料老人ホーム』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="107" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは<span class="fs-18"><span class="bg-y">『サービス付き高齢者向け住宅』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+
+                <div id="108" class="answer point_box">
+                    <div class="box">
+                        <div class="title">
+                        <p>あなたにあった老人ホームは<span class="fs-18"><span class="bg-y">『ケアハウス』</span></span>です！</p>
+                        </div>
+                    <div class="txt">
+                        <div class="img">
+                        <%= image_tag '' %></div>
+                        <p>説明文「タイトル」</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p>詳細を記載</p>
+                        <p><a href="#" class="square_btn">もう一度診断する</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </article>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+   $('a[href^=#]').click(function() {
+      var speed = 600;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+$(function(){
+    h = $(window).height();
+    h = h-30;
+    $(".question").css("min-height", h + "px");
+    $(".answerList .box").css("min-height", h + "px");
+    
+});
+function show(idName){ 
+    $("#" + idName).show();
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
