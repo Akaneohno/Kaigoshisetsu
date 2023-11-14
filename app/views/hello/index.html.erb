@@ -24,47 +24,61 @@
 
 
         <div class="second-block">
-        <h5>こころがつかれているあなたへ</h5>
+        <h5>介護施設選びにお困りのあなたへ</h5>
         <p style="margin-bottom:1.5em;"></p>
        
-        <p>仕事が大変、勉強いやだ、人間関係がうまくいかない、なんかもうイライラする！… </p>
-        <p> 自分が気づかない間に、ストレスはたまっているものです。 </p>
-        <p> そんなあなたを、目いっぱいいやすためのサイトを作りました。 </p>
-        <p> まずはこころのストレス度をセルフチェックして、 </p>
-        <p>それからかわいいねこちゃんたちにたくさん癒されてくださいね。 </p>
-        <p> あなたがすこしでもハッピーになれますように。 </p>
-       
+        <p>介護施設診断サイト○○へようこそ！</p>
+        <p></p>
+        <p>このWebサイトでは最大6問のシンプルな2択の質問お答えいただくことで、多岐にわたる介護施設の中から最適な施設の診断を行っております!</p>
+        <p></p>
+        <p>一般的な介護サイトでは、ふまえるべき情報量が多く選びきれない...と思った経験のある方もいらっしゃるのではないでしょうか。</p>
+        <p></p>
+       <p>この診断では自身やご家族の方にとって最適な施設形態が分かるとともに、自分がどんな条件を重要視しているかも明確になると考えています！</p>
+        <p></p>
+        <p>この診断を通して、ある程度施設の形態を絞った上で入居したいと思える施設探しに役立てて頂けたら嬉しいです！</p>
+        <p></p>
+        <p>また、このWebサイトでは認知症予防に役立つちょっとしたクイズもご用意してますので、ぜひ挑戦してみてください!</p>
+
         </div>
 
-        
+    
         <div class="third-block">
-        <h5>こころのセルフチェック</h5>
-        <div class="hajimeru">
-        <%= link_to '老人ホームを診断', :controller => "kaigos", :action => "index" %>
-        </div>
-        <div class="new-square"></div>
-        </div>
-        </div>
-      
+        <%= link_to kaigos_path do %>
+
+          <div class="header_menu_top"></div>
+          <% end %>
+
+         <div class="desc">
+           <p class="ttl"> 
+           <h4>老</h4>
+           <h4>人</h4>
+           <h4>ホ</h4>
+           <h4>ー</h4>
+           <h4>ム</h4>
+           <h4>を</h4>
+           <h4>診</h4>
+           <h4>断</h4>
+            </p>
+           <p class="ttl_kana mincho">ろうじんホームをしんだん</p>
+         </div>
+         
         </div>
 
+        <div class="forth-block">  
+         <%= link_to quizs_index_path do %>
+           <div class="header_menu_top2"></div>
+         <% end %>
 
-        <div class="fourth-block">
-        <h5>いやしてもらう</h5>
-        <div class="hajimeru2">
-        <%= link_to '老人ホームを診断', :controller => "kaigos", :action => "index" %>
+         <div class="desc2">
+           <p class="ttl"> 認知症予防クイズ</p>
+           <p class="ttl_kana mincho">にんちしょうよぼうくいず</p>
+         </div>
         </div>
-        <div class="new-square2"></div>
-        </div>
-
-        <div class="fifth-block">
-        <h5></h5>
-        </div>
-  
+         
 
 
        
-        <footer>
+      <footer>
         <p>Copyright © Kaigoshisetsu All Rights Reserved.</p>
       </footer>
     </body>
