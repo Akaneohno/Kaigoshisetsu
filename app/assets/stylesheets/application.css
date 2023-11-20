@@ -21,30 +21,39 @@
     font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
       Meiryo, "ＭＳ Ｐゴシック", sans-serif;
   }
-  header {
-    background-color: #f5f4ee;
+  .header1 {
     height: 80px;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  header a {
+  .header1 a {
     color: #000066; 
     text-decoration: none; 
   }
-  header h1 {
-    color: #000066;
+  .header_menu_top3{
+    width: 300px;
+    height: 80px;
+    background-image: url('h1.jpg');
     margin-left: 30px;
-  }
+    }
+
+
+  
   .header-list {
     display: flex;
     align-items: center;
   }
-  header ul {
+  .header1 ul {
+    font-size: 20px;
+    margin-right: 50px;
+  }
+  .header1 li {
+    font-size: 20px;
     display: flex;
   }
-  header li {
-    list-style: none;
+
+    /*list-style: none;
     margin-right: 40px;
-  }
+  

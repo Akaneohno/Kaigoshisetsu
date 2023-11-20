@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>介護施設</title>
+    <title>Camellia</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,14 +11,23 @@
 
   <body>
     <header>
-      <h1>Kaigoshisetsu</h1>
-      <div class="header-list">
+    <div class="header1">
+    <%= link_to hello_index_path do %>
+      <div class="header_menu_top3">
+      </div>
+    <% end %>
+    <div class="header-list">
       <ul>
       <%= link_to '老人ホームを診断', :controller => "kaigos", :action => "index" %>
-      <%= link_to '認知症予防クイズ', :controller => "quizs", :action => "index" %>
       </ul>
-      </div>
+      <li>
+      <%= link_to '認知症予防クイズ', :controller => "quizs", :action => "index" %>
+      </li>
+
+    </div>
+    </div>
     </header>
+    
 
     <main>
       <%= yield %>
