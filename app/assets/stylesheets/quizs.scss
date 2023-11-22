@@ -20,13 +20,67 @@ td{font-weight:400;vertical-align:top;word-break:break-all;word-wrap:break-word}
 
 body {
    
-    font-size: 15px;
+    font-size: 20px;
     line-height: 1;
-    color: #1d1d1d;
+    color: #535353;
+}
+
+#commonHeader {
+    position: relative;
+    height: 170px;
+    margin: 0 auto;
+    background-color: #000066;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.25em;
+    border-top: solid 2px #000066;
+    border-bottom: solid 2px #000066;
+
+
+}
+#commonHeader section#flows {
+    margin: 0 auto;
+    max-height: 170px;
+    position: relative;
+   
+    font-size: 360%;
+    color: #f5f4ee;
+    text-align: center;
+    padding:5px 5px 30px;
+
+
 }
 
 
+#flowsHead{
+    font-size: 100%;
+    color: #f5f4ee;
+    text-align: center;
+    padding-top: 30px;
+    padding:30px 5px 5px;
 
+
+}
+
+
+#commonHeader section#flows a.homeLink {
+    width: 555px;
+    height: 58px;
+    position: absolute;
+    left: 200px;
+    top: 77px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.q{
+    font-family: "Mplus 1p";
+    font-size:300%;
+    height: 50px;
+    color:#000066;
+}
 
 .header-nav {
     background-color: #F2F1ED;
@@ -266,17 +320,6 @@ article:after, section:after, .clrFx:after {
 
 
 
-
-.q0{
-   
-    font-size:120%;
-    height: 50px;
-    color:#1d1d1d;
-}
-
-
-
-
 .point_box0 {
     background: -webkit-repeating-linear-gradient(-45deg, #1d1d1d, #1d1d1d 3px,#1d1d1d 3px, #1d1d1d 7px);
     padding: px;
@@ -417,8 +460,9 @@ font-family: 'Zen Kaku Gothic Antique', sans-serif;
 
 
   .custom-image {
-    width: 300px;
-    height: 200px;
+    width: 550px;
+    height: 400px;
+    margin-top: 80px;
     /* オプション: アスペクト比を維持する場合 */
     object-fit: cover; /* または object-fit: contain; */
   }
